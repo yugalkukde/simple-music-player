@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MusicPlayer">
+
+    <ImageView
+        android:id="@+id/defaultImage"
+        android:layout_width="wrap_content"
+        android:layout_height="400sp"
+        android:src="@drawable/img_2" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:id="@+id/info"
+        android:paddingLeft="10sp"
+        android:layout_height="70sp"
+        android:textColor="#fff"
+        android:layout_below="@id/defaultImage"
+        android:background="@color/colorDefault"
+        android:textSize="16sp"
+        android:text="Hello" />
+
+    <SeekBar
+        android:layout_width="match_parent"
+        android:layout_height="40sp"
+        android:id="@+id/playSeek"
+        android:layout_below="@id/info"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="00:00"
+        android:paddingLeft="10sp"
+        android:id="@+id/tvCurrent"
+        android:textSize="16sp"
+        android:layout_below="@id/playSeek"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvTotal"
+        android:text="02:00"
+        android:paddingRight="10sp"
+        android:textSize="16sp"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@id/playSeek"
+        android:layout_alignParentRight="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="90dp"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/playbtn"
+        android:onClick="play"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/ic_pause" />
+
+    <Button
+        android:id="@+id/previousbtn"
+        android:layout_width="wrap_content"
+        android:layout_height="90sp"
+        android:paddingLeft="100dp"
+        android:onClick="previous"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/ic_previous" />
+
+    <Button
+        android:id="@+id/nextbtn"
+        android:layout_width="wrap_content"
+        android:layout_height="90sp"
+        android:paddingRight="100dp"
+        android:onClick="next"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/ic_next"
+        android:layout_alignParentRight="true"
+        tools:ignore="RtlCompat" />
+
+
+
+</RelativeLayout>
